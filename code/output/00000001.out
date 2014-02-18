@@ -1,0 +1,46 @@
+Running in wrapper mode for '1'
+
+Running python job.
+
+----------------------------------------
+Problem running the job:
+(<type 'exceptions.SystemExit'>, SystemExit(0,), <traceback object at 0x3c349e0>)
+Traceback (most recent call last):
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 41, in job_runner
+    elif job.language == PYTHON: run_python_job(job)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 130, in run_python_job
+    module  = __import__(job.name)
+  File "/home/rich/working/fb_recruit/code/title_tag_optimize.py", line 2, in <module>
+    from IPython.parallel import Client
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/__init__.py", line 46, in <module>
+    from .core.application import Application
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/core/application.py", line 39, in <module>
+    from IPython.core import release, crashhandler
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/core/crashhandler.py", line 28, in <module>
+    from IPython.core import ultratb
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/core/ultratb.py", line 83, in <module>
+    import pydoc
+  File "/home/rich/anaconda/lib/python2.7/pydoc.py", line 123, in <module>
+    _re_stripid = re.compile(r' at 0x[0-9a-f]{6,16}(>+)$', re.IGNORECASE)
+  File "/home/rich/anaconda/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/home/rich/anaconda/lib/python2.7/re.py", line 240, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/rich/anaconda/lib/python2.7/sre_compile.py", line 505, in compile
+    code = _code(p, flags)
+  File "/home/rich/anaconda/lib/python2.7/sre_compile.py", line 490, in _code
+    _compile(code, p.data, flags)
+  File "/home/rich/anaconda/lib/python2.7/sre_compile.py", line 83, in _compile
+    _compile(code, av[2], flags)
+  File "/home/rich/anaconda/lib/python2.7/sre_compile.py", line 58, in _compile
+    _compile_charset(av, flags, code, fixup)
+  File "/home/rich/anaconda/lib/python2.7/sre_compile.py", line 181, in _compile_charset
+    emit = code.append
+  File "main.py", line 316, in sigint_handler
+    sys.exit(0)
+SystemExit: 0
+None
+----------------------------------------
+Job file reloaded.
+Could not find value in output file.
+Job failed in 0.13 seconds.

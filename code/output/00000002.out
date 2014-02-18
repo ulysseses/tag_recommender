@@ -1,0 +1,12 @@
+Running in wrapper mode for '2'
+
+Running python job.
+
+weights: [0.7494999999999999, 0.2505, 0.7494999999999999]
+treshold: 0.2505
+Got result 0.391286
+
+Job file reloaded.
+Completed successfully in 200.78 seconds. [0.391286]
+setting job 2 complete
+set...

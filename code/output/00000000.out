@@ -1,0 +1,21 @@
+Running in wrapper mode for '0'
+
+Running python job.
+
+weights + threshold: THRESHOLD WEIGHTS
+----------------------------------------
+Problem running the job:
+(<type 'exceptions.KeyError'>, KeyError('threshold',), <traceback object at 0x4149fc8>)
+Traceback (most recent call last):
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 41, in job_runner
+    elif job.language == PYTHON: run_python_job(job)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 131, in run_python_job
+    result = module.main(job.id, params)
+  File "/home/rich/working/fb_recruit/code/title_tag_optimize.py", line 74, in main
+    assert type(params['threshold']) == float
+KeyError: 'threshold'
+None
+----------------------------------------
+Job file reloaded.
+Could not find value in output file.
+Job failed in 0.23 seconds.

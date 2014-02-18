@@ -1,0 +1,40 @@
+Running in wrapper mode for '3'
+
+Running python job.
+
+weights: [0.2505, 0.7494999999999999, 0.2505]
+treshold: 0.7495
+----------------------------------------
+Problem running the job:
+(<type 'exceptions.SystemExit'>, SystemExit(0,), <traceback object at 0x2b0e170>)
+Traceback (most recent call last):
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 41, in job_runner
+    elif job.language == PYTHON: run_python_job(job)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/spearmint/runner.py", line 131, in run_python_job
+    result = module.main(job.id, params)
+  File "/home/rich/working/fb_recruit/code/title_tag_optimize.py", line 77, in main
+    return title_tag_optimize(weights, threshold)
+  File "/home/rich/working/fb_recruit/code/title_tag_optimize.py", line 62, in title_tag_optimize
+    dv.execute(cmd_str, block=True)
+  File "<string>", line 2, in execute
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/view.py", line 63, in sync_results
+    ret = f(self, *args, **kwargs)
+  File "<string>", line 2, in execute
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/view.py", line 48, in save_ids
+    ret = f(self, *args, **kwargs)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/view.py", line 647, in execute
+    ar.get()
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/asyncresult.py", line 120, in get
+    self.wait(timeout)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/asyncresult.py", line 151, in wait
+    self._ready = self._client.wait(self.msg_ids, timeout)
+  File "/home/rich/anaconda/lib/python2.7/site-packages/IPython/parallel/client/client.py", line 1080, in wait
+    time.sleep(1e-3)
+  File "main.py", line 316, in sigint_handler
+    sys.exit(0)
+SystemExit: 0
+None
+----------------------------------------
+Job file reloaded.
+Could not find value in output file.
+Job failed in 96.32 seconds.

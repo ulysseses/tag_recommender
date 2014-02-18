@@ -1,0 +1,9 @@
+Best result: 0.391286
+Job-id: 2
+Parameters: 
+name: "WEIGHTS"
+dbl_val: 0.7495
+dbl_val: 0.2505
+dbl_val: 0.7495
+name: "THRESHOLD"
+dbl_val: 0.2505

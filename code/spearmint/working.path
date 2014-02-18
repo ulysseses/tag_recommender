@@ -1,0 +1,5 @@
+# Put the path of the working directory containing the pickle files.
+# The path can be relative or absolute
+# NOTE: the `data` directory MUST be within the same (root)-directory as `working`
+
+~/working/fb_recruit/working

@@ -1,0 +1,61 @@
+Author:			Victor Chen
+Email:			vlchen91 <at> gmail <dot> com
+Date:			02/04/13
+Version:		0.1
+Description: 	Included in this directory is a collection of modules and scripts that
+				can be used to language-process, dimensionality-prune, correlate,
+				and predict tags for StackOverflow posts provided by `Train.csv` and
+				`Test.csv`
+
+Dependencies:
+
+	Python==2.7
+	nltk
+		WordNet corpora downloaded with nltk.download()
+	gensim
+	cython
+	numpy
+	IPython
+	spearmint
+
+Instructions:
+
+------------------------------------------------------------
+Verify that the following directory structure is correct:
+
+fb_recruit
+	-> code
+		-> lib
+		-> spearmint
+	-> data
+	-> working
+
+Also, copy the provided `spearmint.zip` into your local site-packages directory for
+the local modified spearmint code. If you want to test-drive spearmint, then un-zip
+it and place it into the same directory as this README file.
+------------------------------------------------------------
+
+In the preceding directory, run the code blocks within `process_and_prune.ipynb`:
+
+	cd ..; ipython notebook --pylab inline
+
+You may optionally build the recommender correlation dictionaries from within ipython
+notebook, or you can manually do so by envoking the following script within the
+preceding directory:
+
+	python -c "import build_dicts"
+
+Once the data have been pre-processed and pruned (for faster [but less accurate]
+prediction time), run the code in the current directory (spearmint):
+
+	ipcluster start -n 2 & # or 4 if you have > 16 GB memory
+	python main.py --driver=local --method=GPEIChooser --method-args=noiseless=0
+		config.pb
+
+Spearmint will then run until either EOF is reached or is interrupted.
+
+	<ctrl + d> or <ctrl + c>
+
+Finally, within the same shell, turn off the IPython cluster with:
+
+	ipcluster stop
